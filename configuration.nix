@@ -101,12 +101,14 @@
     # Misc
     neofetch
     obsidian
+    pika-backup
     # In Testing
     i3blocks
     polybar
     alejandra
     # Coding
     dotnet-sdk_8
+    jdk17
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
