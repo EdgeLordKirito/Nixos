@@ -92,13 +92,16 @@
     nerdfonts
     # Misc
     neofetch
-    #obsidian
+    obsidian
     # In Testing
     i3blocks
     polybar
     alejandra
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+        "electron-25.9.0"
+  ];
 
   programs.neovim = {
   	enable = true;
