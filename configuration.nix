@@ -84,6 +84,7 @@
     # Terminals
     alacritty
     tmux
+    stow
     #Shell
     zsh
     # GUI Enviroment
@@ -104,6 +105,8 @@
     i3blocks
     polybar
     alejandra
+    # Coding
+    dotnet-sdk_8
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
