@@ -78,6 +78,7 @@
     gnome.gnome-calculator
     # Image Processing
     gimp
+    krita
     # Text Processing
     neovim
     # Version Control
