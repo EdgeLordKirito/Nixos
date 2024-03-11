@@ -52,6 +52,9 @@
   services.xserver.enable = true;
   services.xserver.windowManager.i3.enable = true;
 
+  hardware.bluetooth.enable = true; # Enables bluetooth support
+  #hardware.bluetooth.powerOnboot = true;
+  services.blueman.enable = true;
   # Configure console keymap
   console.keyMap = "de";
 
@@ -92,6 +95,13 @@
     rofi
     starship
     feh
+    lxappearance
+    # Gtk Themes
+    arc-theme
+    # Cursor Themes
+    quintom-cursor-theme
+    # Icon Themes
+    papirus-icon-theme
     # Web
     firefox
     wget
@@ -104,11 +114,11 @@
     pika-backup
     # In Testing
     i3blocks
-    polybar
     alejandra
     # Coding
     dotnet-sdk_8
     jdk17
+    rustup
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
