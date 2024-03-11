@@ -107,6 +107,9 @@
     quintom-cursor-theme
     # Icon Themes
     papirus-icon-theme
+    # Security
+    keepass
+    gnome-secrets
     # Web
     firefox
     wget
@@ -117,13 +120,13 @@
     neofetch
     obsidian
     pika-backup
-    # In Testing
-    i3blocks
-    alejandra
     # Coding
     dotnet-sdk_8
     jdk17
     rustup
+    # In Testing
+    i3blocks
+    alejandra
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
