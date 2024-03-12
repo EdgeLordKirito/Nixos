@@ -53,8 +53,12 @@
   services.xserver.windowManager.i3.enable = true;
 
   hardware.bluetooth.enable = true; # Enables bluetooth support
-  #hardware.bluetooth.powerOnboot = true;
+  #hardware.bluetooth.powerOnboot = true; # does not work
   services.blueman.enable = true;
+
+  programs.zsh.enable = true; # enable zsh system wide
+  users.defaultUserShell = pkgs.zsh;
+
   # Configure console keymap
   console.keyMap = "de";
 
@@ -90,7 +94,7 @@
     tmux
     stow
     #Shell
-    zsh
+    zsh # might conflict with the added option for zsh
     # GUI Enviroment
     picom
     rofi
