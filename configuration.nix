@@ -109,7 +109,7 @@
     papirus-icon-theme
     # Security
     keepass
-    gnome-secrets
+    keepassxc
     # Web
     firefox
     wget
