@@ -71,7 +71,7 @@
   };
 
   # Allow unfree packages
-	  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -107,9 +107,6 @@
     quintom-cursor-theme
     # Icon Themes
     papirus-icon-theme
-    # Security
-    keepass
-    keepassxc
     # Web
     firefox
     wget
@@ -120,15 +117,13 @@
     neofetch
     obsidian
     pika-backup
+    # In Testing
+    i3blocks
+    alejandra
     # Coding
     dotnet-sdk_8
     jdk17
     rustup
-    # In Testing
-    i3blocks
-    alejandra
-    pywal
-    wallust
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -139,6 +134,13 @@
   	enable = true;
   	defaultEditor = true;
   };
+
+  # Fonts
+  fonts.packages = with pkgs; [
+  	fira-code
+	fira-code-symbols
+	nerdfonts
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
