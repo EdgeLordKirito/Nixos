@@ -89,10 +89,11 @@
     git
     # File Interaction
     lf
+    yazi
+    pcmanfm
     # Terminals
     alacritty
     tmux
-    stow
     #Shell
     zsh # might conflict with the added option for zsh
     # GUI Enviroment
@@ -101,6 +102,7 @@
     starship
     feh
     lxappearance
+    wallust
     # Gtk Themes
     arc-theme
     # Cursor Themes
@@ -109,12 +111,9 @@
     papirus-icon-theme
     # Web
     firefox
-    wget
-    ookla-speedtest
     #Fonts
-    nerdfonts
+    #nerdfonts # Test if this is needed if fonts are listed separetly
     # Misc
-    neofetch
     obsidian
     pika-backup
     # In Testing
@@ -124,6 +123,15 @@
     dotnet-sdk_8
     jdk17
     rustup
+    # ShellApps
+    stow
+    tree
+    neofetch
+    ookla-speedtest
+    wget
+    bottom
+    ncmcpp
+    gnupg1orig
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
