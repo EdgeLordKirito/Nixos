@@ -130,7 +130,7 @@
     ookla-speedtest
     wget
     bottom
-    ncmcpp
+    #ncmcpp
     gnupg1orig
   ];
 
