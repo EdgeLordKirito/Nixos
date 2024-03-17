@@ -18,7 +18,7 @@
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
+# Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
@@ -73,10 +73,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+#let
+#  unstable = import <nixos-unstable> { config = { allow};Unfree = true; }; };
+#in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     # Calculator 
     bc
     gnome.gnome-calculator
@@ -94,7 +96,7 @@
     # Terminals
     unstable.alacritty
     tmux
-    #Shell
+    #Shel};l
     zsh # might conflict with the added option for zsh
     # GUI Enviroment
     picom
@@ -135,6 +137,7 @@
     killall
     inxi
   ];
+#};
 
   nixpkgs.config.permittedInsecurePackages = [
         "electron-25.9.0"
