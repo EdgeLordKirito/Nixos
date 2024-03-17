@@ -94,7 +94,8 @@
     yazi
     pcmanfm
     # Terminals
-    unstable.alacritty
+    #unstable.alacritty
+    alacritty
     tmux
     #Shel};l
     zsh # might conflict with the added option for zsh
