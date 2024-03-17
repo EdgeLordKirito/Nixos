@@ -99,7 +99,7 @@
     #Shell
     zsh # might conflict with the added option for zsh
     # GUI Enviroment
-    #picom
+    #picom-next
     rofi
     starship
     feh
@@ -134,6 +134,8 @@
     bottom
     #ncmcpp
     gnupg1orig
+    killall
+    inxi
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
