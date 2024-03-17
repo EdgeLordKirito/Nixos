@@ -97,7 +97,7 @@
     #Shell
     zsh # might conflict with the added option for zsh
     # GUI Enviroment
-    picom-next
+    picom
     rofi
     starship
     feh
