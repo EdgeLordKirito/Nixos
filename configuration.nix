@@ -77,9 +77,6 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-#let
-#  unstable = import <nixos-unstable> { config = { allow};Unfree = true; }; };
-#in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -98,8 +95,6 @@ in
     yazi
     pcmanfm
     # Terminals
-    #unstable.alacritty
-    alacritty
     tmux
     #Shel};l
     zsh # might conflict with the added option for zsh
@@ -141,8 +136,9 @@ in
     gnupg1orig
     killall
     inxi
-  ];
-#};
+  ] ++ (with unstable-pkgs; [
+    alacritty
+  ]);
 
   nixpkgs.config.permittedInsecurePackages = [
         "electron-25.9.0"
