@@ -4,6 +4,10 @@
 
 { config, pkgs, ... }:
 
+
+let  
+ unstable-pkgs = import <nixpkgs-unstable> {config.allowUnfree = true;};  
+in  
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -70,15 +74,6 @@
     packages = with pkgs; [];
   };
 
-  nixpkgs.config = {
-  	allowUnfree = true;
-	packageOverrides = pkgs: {
-		unstable = import <nixpkgs-unstable>{
-		  config = config.nixpkgs.config;
-		};
-	};
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -100,9 +95,8 @@
     yazi
     pcmanfm
     # Terminals
-    unstable.alacritty
     tmux
-    #Shell
+    #Shel};l
     zsh # might conflict with the added option for zsh
     # GUI Enviroment
     picom
@@ -142,8 +136,9 @@
     gnupg1orig
     killall
     inxi
-    ];
-
+  ] ++ (with unstable-pkgs; [
+    alacritty
+  ]);
 
   nixpkgs.config.permittedInsecurePackages = [
         "electron-25.9.0"
