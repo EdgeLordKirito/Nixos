@@ -92,7 +92,7 @@
     yazi
     pcmanfm
     # Terminals
-    alacritty
+    unstable.alacritty
     tmux
     #Shell
     zsh # might conflict with the added option for zsh
