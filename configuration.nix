@@ -51,8 +51,6 @@
 
   services.xserver.enable = true;
   services.xserver.windowManager.i3.enable = true;
-  services.picom.enable = true;
-
 
   hardware.bluetooth.enable = true; # Enables bluetooth support
   #hardware.bluetooth.powerOnboot = true; # does not work
@@ -99,7 +97,7 @@
     #Shell
     zsh # might conflict with the added option for zsh
     # GUI Enviroment
-    #picom-next
+    picom-next
     rofi
     starship
     feh
