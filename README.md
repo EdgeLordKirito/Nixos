@@ -1,6 +1,7 @@
 ## Install guide for NixOs  
 
 ### 1. Add git, gnu stow and firefox for easy access to this tutorial
+In etc/nixos/configuration.nix add this
 ```
 environment.systemPackages = with pkgs; [
       git
